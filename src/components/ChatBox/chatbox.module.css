@@ -123,6 +123,14 @@
   font: 400 12px/normal var(--primary_font);
   text-align: center;
 }
+.ask_container p a {
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+.ask_container p a:hover {
+  color: var(--black);
+  font-weight: 600;
+}
 
 .cardBoxSlider {
   width: 100%;

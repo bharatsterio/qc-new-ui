@@ -120,7 +120,9 @@ function Chatbox() {
               <img src="/assets/images/send.svg" alt="send" />
             </button>
           </div>
-          <p>QUICC.AI can make mistakes. Check important info.</p>
+          <p>
+            <a href="/" target="_blank">Privacy Policy</a> &#x2022;  <a href="/" target="_blank">Terms &amp; Conditions</a> &#x2022;  <a href="/" target="_blank">Cookie Policy</a>
+          </p>
         </div>
       </div>
     </section>
