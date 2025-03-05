@@ -1,0 +1,184 @@
+@keyframes moveBg {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.chatbox_container {
+  height: 100%;
+}
+
+.inner_container {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.view_container {
+  width: 100%;
+  height: calc( 100% - 119px );
+  position: relative;
+}
+
+.ask_container {
+  width: 100%;
+  height: auto;
+  padding-bottom: 15px;
+  margin-top: 16px;
+}
+
+.userinput_container {
+  margin-bottom: 24px;
+  display: flex;
+  justify-content: flex-end;
+}
+.userinput_container .userinput {
+  max-width: 60%;
+  padding: 12px 16px;
+  border-radius: 24px 6px 24px 24px;
+  background: var(--black);
+  background: -webkit-linear-gradient(to right, var(--black), #434343);
+  background: linear-gradient(to right, var(--black), #434343);
+  color: var(--white);
+  font: 400 18px/normal var(--primary_font);
+}
+
+.qcoutput_container {
+  margin-bottom: 24px;
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+.qcoutput_container::before {
+  content: 'QC.';
+  animation: 2s ease 0s infinite normal none running moveBg;
+  color: transparent;
+  background: #232526; /* fallback for old browsers */
+  background: #355c7d; /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #355c7d, #6c5b7b, #c06c84); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #355c7d, #6c5b7b, #c06c84);
+  background-size: 300% 300%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  font: 800 30px/normal var(--primary_font);
+}
+.qcoutput_container .qcoutput {
+  width: calc( 100% - 67px );
+  padding: 5px 8px;
+  color: var(--black);
+  font: 500 18px/24px var(--primary_font);
+}
+
+.input_container {
+  position: relative;
+}
+.input_container textarea {  
+  width: 100%;
+  max-height: 250px;
+  padding: 17px 50px 17px 30px;
+  border: 1px solid var(--grey);
+  border-radius: 34px;
+  display: block;
+  background-color: var(--lightgrey);
+  font: 500 16px/normal var(--primary_font);
+  outline: 0;
+  resize: none;
+  overflow: hidden;
+}
+.input_container textarea:focus,
+.input_container textarea:active {
+  border: 1px solid var(--black);
+  background-color: var(--white);
+}
+.input_container .sendBtn {
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  right: 10px;
+  bottom: 9px;
+  background-color: var(--black);
+  cursor: pointer;
+  opacity: 0;
+  visibility: hidden;
+  transition: all .2s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+.input_container .sendBtn.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.ask_container p {
+  margin: 15px 0 0;
+  font: 400 12px/normal var(--primary_font);
+  text-align: center;
+}
+
+.cardBoxSlider {
+  width: 100%;
+  margin: 20px 0 0;
+}
+.cardBoxSlider .SwiperSlide {
+  width: auto;
+}
+.cardBoxSlider .card {
+  width: 250px;
+  height: 150px;
+  padding: 10px;
+  border: 1px solid transparent;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+  justify-content: center;
+  background-color: var(--lightgrey);
+  cursor: pointer;
+  transition: all 0.2s ease-in;
+}
+.cardBoxSlider .card span {
+  color: var(--black);
+  font: 500 16px/normal var(--primary_font);
+}
+.cardBoxSlider .card:hover {
+  border: 1px solid var(--black);
+  background-color: var(--white);
+}
+
+@media screen and (min-width:1200px) {
+  .inner_container {
+    width: 1024px;
+  }
+}
+
+@media screen and (max-width:767px) {
+  .userinput_container .userinput {
+    max-width: 80%;
+    font: 400 14px/normal var(--primary_font);
+  }
+
+  .qcoutput_container .qcoutput {
+    font: 500 14px/normal var(--primary_font);
+  }
+
+  .qcoutput_container::before {
+    font: 800 22px/normal var(--primary_font);
+  }
+
+  .cardBoxSlider .card {
+    width: 180px;
+  }
+  .cardBoxSlider .card span {
+    font-size: 14px;
+  }
+}
