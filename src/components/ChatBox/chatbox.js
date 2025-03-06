@@ -1,6 +1,5 @@
 import { useRef, useState, useEffect } from "react";
-// import { TypeAnimation } from 'react-type-animation';
-// import Scrollbar from "react-scrollbars-custom";
+import '../../../src/reset.css';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/free-mode';
@@ -114,6 +113,7 @@ function Chatbox() {
               value={text}
               onChange={(e) => setText(e.target.value)}
               rows="1"
+              className={chatboxClasses.input}
               placeholder="Ask anything here..." 
             />
             <button type="button" className={`${chatboxClasses.sendBtn} ${text.trim() ? chatboxClasses.active : ""}`}>

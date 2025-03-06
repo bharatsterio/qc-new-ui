@@ -2,6 +2,7 @@
   --white: #fff;
   --black: #000;
   --grey: #9d9d9d;
+  --grey2: #555;
   --lightgrey: #dadada;
   --primary_font: "Montserrat", sans-serif;
 }
@@ -10,4 +11,39 @@ body {
   margin: 0;
   font-family: var(--primary_font);
   font-weight: normal;
+}
+
+/*Common CSS*/
+
+main {
+  height: 100vh;
+  padding-top: 85px;
+}
+.main_section {
+  height: auto !important;
+}
+
+.height-100 {
+  height: 100%;
+}
+
+.sub_title {
+  margin: 32px 0 !important;
+  border-color: var(--lightgrey) !important;
+}
+.sub_title h2 {
+  margin: 0;
+  color: var(--black);
+  font: 700 3rem/normal var(--primary_font);
+}
+
+@media screen and (max-width:767px) {
+  main {
+    padding-top: 70px;
+  }
+
+  .sub_title h2 {
+    margin: 0 -16px;
+    font: 700 2rem/normal var(--primary_font);
+  }
 }

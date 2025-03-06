@@ -36,14 +36,3 @@
     transform: rotate(360deg);
   }
 }
-
-main {
-  height: 100vh;
-  padding-top: 85px;
-}
-
-@media screen and (max-width:767px) {
-  main {
-    padding-top: 70px;
-  }
-}

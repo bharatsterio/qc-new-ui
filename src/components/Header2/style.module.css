@@ -1,0 +1,87 @@
+@keyframes moveBg {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.header {
+  width: 100%;
+  height: 85px;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 999;
+  background-color: var(--white);
+}
+
+.header .divider {
+  border-block-start: 1px solid var(--grey);
+  margin: 0;
+}
+
+.logo_container a {
+  width: 80px;
+  height: 50px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: 4s ease 0s infinite normal none running moveBg;
+  background: var(--black); /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, var(--grey) 0%, var(--black) 100%); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, var(--grey) 0%, var(--black) 100%);
+  background-size: 500% 500%;
+  color: var(--white) !important;
+  font: 800 32px/32px var(--primary_font);
+}
+
+.profile_container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.profile_container > div {
+  padding: 10px 0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+}
+.profile_container > div > small {
+  margin-top: 4px;
+  color: transparent;
+  background: var(--black); /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #355c7d, #6c5b7b, #c06c84); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #355c7d, #6c5b7b, #c06c84);
+  background-size: 300% 300%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  font: 600 14px/18px var(--primary_font);
+  text-align: right;
+}
+
+@media screen and (max-width:767px) {
+  .header {
+    height: 70px;
+  }
+
+  .logo_container a {
+    width: 70px;
+    height: 45px;
+    font: 800 24px/24px var(--primary_font);
+  }
+
+  .profile_container > div {
+    padding: 3px 0;
+  }
+  .profile_container > div > small {
+    font-size: 12px;
+  }
+}

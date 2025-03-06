@@ -2,7 +2,7 @@ import headerClasses from "./header.module.css";
 
 function Header() {
   return (
-    <header>
+    <header className={headerClasses.header}>
       <div className={headerClasses.logo_container}>
         <a href="/" title="quicc.ai">
           <img src="/assets/images/quicc_logo_black.png" alt="logo" />
