@@ -44,6 +44,10 @@
 }
 
 @media screen and (max-width:575px) {
+  .footer {
+    margin-top: 50px;
+  }
+
   .logo_container {
     margin-bottom: 16px;
     display: flex;
